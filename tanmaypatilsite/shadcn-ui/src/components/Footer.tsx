@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
       <div className="max-w-6xl mx-auto">
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-3 gap-8 mb-8">
-          {/* Brand Section */}
+          {/* About Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -36,10 +36,10 @@ const Footer: React.FC = () => {
             viewport={{ once: true }}
             className="space-y-4"
           >
-            <h3 className="text-2xl font-bold gradient-text">Rajwardhan Bagawade</h3>
+            <h4 className="text-lg font-semibold text-[var(--neuro-text-primary)]">About</h4>
             <p className="text-[var(--neuro-text-secondary)] leading-relaxed">
-              Crafting digital experiences that inspire and engage. 
-              Let's build something amazing together.
+              Full Stack Developer passionate about creating innovative solutions. 
+              Let's turn ideas into reality.
             </p>
           </motion.div>
 
@@ -52,15 +52,15 @@ const Footer: React.FC = () => {
             className="space-y-4"
           >
             <h4 className="text-lg font-semibold text-[var(--neuro-text-primary)]">
-              Quick Links
+              Navigation
             </h4>
-            <div className="space-y-2">
+            <div className="grid grid-cols-2 gap-2">
               {quickLinks.map((link) => (
                 <motion.button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
                   whileHover={{ x: 5 }}
-                  className="block text-[var(--neuro-text-secondary)] hover:text-[var(--neuro-accent)] transition-colors duration-200"
+                  className="text-left text-[var(--neuro-text-secondary)] hover:text-[var(--neuro-accent)] transition-colors duration-200"
                 >
                   {link.label}
                 </motion.button>
@@ -80,8 +80,9 @@ const Footer: React.FC = () => {
               Get In Touch
             </h4>
             <div className="space-y-2 text-[var(--neuro-text-secondary)]">
-              <p>rajwardhanbagawade.online</p>
-              <p>Pune, India</p>
+              <p>📧 rajwardhanbagawade343@gmail.com</p>
+              <p>📍 Pune, Maharashtra, India</p>
+              <p>💼 Available for opportunities</p>
             </div>
           </motion.div>
         </div>
@@ -98,14 +99,14 @@ const Footer: React.FC = () => {
             viewport={{ once: true }}
             className="flex items-center space-x-2 text-[var(--neuro-text-secondary)]"
           >
-            <span>© {currentYear} Rajwardhana Bagawade</span>
+            <span>© {currentYear}</span>
             <motion.div
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ duration: 1, repeat: Infinity }}
             >
               <Heart className="w-4 h-4 text-red-500 fill-current" />
             </motion.div>
-            <span>and lots of coffee</span>
+            <span>Made with passion & code</span>
           </motion.div>
 
           {/* Back to Top Button */}
