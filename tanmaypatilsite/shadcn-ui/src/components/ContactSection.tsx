@@ -60,8 +60,8 @@ const ContactSection: React.FC = () => {
     {
       icon: Phone,
       label: 'Phone',
-      value: '+91 8149787823',
-      href: 'tel:+918149787823',
+      value: '+91 xxxxxxxxxx',
+      href: 'tel:+xxxxxxxxxx',
       color: '#34a853'
     },
     {
@@ -140,11 +140,6 @@ const ContactSection: React.FC = () => {
                 );
               })}
             </div>
-
-            {/* Resume Download Button */}
-            <motion.div >
-              <motion.button></motion.button>
-            </motion.div>
 
             {/* Social Links */}
             <motion.div variants={staggerItem} className="pt-8">
