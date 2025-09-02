@@ -239,12 +239,12 @@ const HeroSection: React.FC = () => {
               >
                 <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 neuro-card rounded-full overflow-hidden glow-effect">
                   <img
-                    src="/Photo1.jpg"
+                    src="/Photo1.webp"
                     alt="Rajwardhan Bagawade"
                     className="w-full h-full object-cover"
                     onError={(e) => {
                       console.log('Image failed to load:', e);
-                      e.currentTarget.src = '/images/Photo1.jpg';
+                      e.currentTarget.src = '/images/Photo1.webp';
                     }}
                   />
                 </div>
