@@ -142,19 +142,8 @@ const ContactSection: React.FC = () => {
             </div>
 
             {/* Resume Download Button */}
-            <motion.div variants={staggerItem} className="pt-6">
-              <motion.a
-                href="https://drive.google.com/drive/my-drive"
-                whileHover={{ 
-                  scale: 1.05,
-                  boxShadow: '0 15px 30px rgba(102, 126, 234, 0.4)'
-                }}
-                whileTap={{ scale: 0.95 }}
-                className="neuro-button px-6 py-4 text-lg font-medium text-[var(--neuro-text-primary)] glow-effect flex items-center space-x-3 w-full justify-center"
-              >
-                <Download className="w-5 h-5" />
-                <span>Download Resume</span>
-              </motion.a>
+            <motion.div >
+              <motion.button></motion.button>
             </motion.div>
 
             {/* Social Links */}
