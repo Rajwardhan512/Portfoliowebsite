@@ -28,14 +28,14 @@ const ExperienceSection: React.FC = () => {
     },
     {
       id: 2,
-      title: 'Secretary',
-      organization: 'Tarang Club',
-      period: '2023-2024',
+      title: 'Event & Operations co-lead',
+      organization: 'Google Developer Groups',
+      period: 'Present',
       location: 'College',
       type: 'Leadership',
       icon: Users,
       color: '#4ecdc4',
-      description: 'Led cultural events and managed administrative responsibilities for the college cultural club. Coordinated with multiple teams and organized large-scale events for student engagement.',
+      description: 'Completed (ongoing) an intensive Data Science internship covering Python, data analysis (Pandas, NumPy), statistics, data visualization, real-world preprocessing, and hands-on projects—building robust, industry-ready, data science skills.',
       skills: ['Leadership', 'Event Management', 'Team Coordination', 'Administration', 'Communication'],
       achievements: [
         'Successfully organized 10+ cultural events',
@@ -45,55 +45,35 @@ const ExperienceSection: React.FC = () => {
     },
     {
       id: 3,
-      title: 'Design Lead',
-      organization: 'S4DS (Society for Data Science)',
-      period: '2023-Present',
+      title: 'Google Cloud Facilitator Program',
+      organization: 'Google Cloud Community India',
+      period: '2023-2024',
       location: 'College',
       type: 'Leadership',
       icon: Palette,
       color: '#ff6b6b',
-      description: 'Leading web design and visual identity for the Data Science Society. Managing design team and overseeing all visual communications, website development, and promotional materials.',
-      skills: ['UI/UX Design', 'Web Design', 'Team Management', 'Figma', 'Brand Identity'],
+      description: 'Completed the Google Cloud Facilitator Program covering extensive hands-on projects with Google Cloud Platform, APIs, containers, cloud storage, and automation. Developed practical expertise in deploying cloud-native solutions and collaborating within peer learning communities.',
+      skills: ['GCP', 'Cloud Storage', 'Looker', 'API Gateway', 'GKE(Kubernetes)'],
       achievements: [
-        'Redesigned society website with 50% improved UX',
-        'Led design team of 8 members',
-        'Created cohesive brand identity across all platforms'
+        'Completed the Google Cloud Facilitator Program and multiple skill badges, gaining practical expertise in cloud computing, Kubernetes, API integration, no-code app development, and cloud-native data solutions using Google Cloud technologies.'
       ]
     },
     {
       id: 4,
-      title: 'Technical Member',
-      organization: 'DSAIII Club',
-      period: '2024',
+      title: 'Member',
+      organization: 'Youth Wing, Jnana Prabodhini',
+      period: '2018-24',
       location: 'College',
-      type: 'Technical',
+      type: 'Social Work',
       icon: Code,
       color: '#f093fb',
-      description: 'Developed club website and event management tools. Contributed to technical infrastructure and helped organize coding competitions and technical workshops.',
-      skills: ['Web Development', 'Event Tools', 'JavaScript', 'Database Management', 'Technical Support'],
+      description: 'Engage in social service through the esteemed Youth Wing, supporting community initiatives and youth empowerment. Emphasize service, leadership, and teamwork while championing social development and positive impact.',
+      skills: ['Leadership', 'Event Handeling', 'Team Management', 'Administration', 'Communication'],
       achievements: [
-        'Built responsive club website from scratch',
-        'Developed event registration system',
-        'Supported 15+ technical workshops'
+    
       ]
     },
-    {
-      id: 5,
-      title: 'Technical Member',
-      organization: 'Byteminds',
-      period: '2024',
-      location: 'NGO',
-      type: 'Volunteer',
-      icon: Code,
-      color: '#43e97b',
-      description: 'Coding for social good - developing technology solutions for NGO operations and creating awareness through tech-driven initiatives. Focus on creating impactful digital solutions.',
-      skills: ['Social Impact Tech', 'Web Development', 'Awareness Campaigns', 'Volunteer Coordination'],
-      achievements: [
-        'Developed NGO management system',
-        'Created digital awareness campaigns',
-        'Contributed 100+ volunteer hours'
-      ]
-    }
+    
   ];
 
   return (

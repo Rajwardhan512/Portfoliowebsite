@@ -57,7 +57,7 @@ const Navigation: React.FC = () => {
               className="text-xl font-bold gradient-text cursor-pointer"
               onClick={() => scrollToSection('hero')}
             >
-              Tanmay Patil
+              Rajwardhan Bagawade
             </motion.div>
 
             {/* Desktop Navigation */}

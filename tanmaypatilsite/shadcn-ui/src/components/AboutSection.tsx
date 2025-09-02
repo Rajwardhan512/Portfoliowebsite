@@ -17,31 +17,35 @@ const AboutSection: React.FC = () => {
   ];
 
   const techStack = [
-    'Python', 'JavaScript', 'Dart', 'Flutter', 'Flask', 'HTML', 'CSS',
-    'TensorFlow', 'scikit-learn', 'Pandas', 'NumPy', 'Google Vision OCR',
-    'AWS', 'GCP', 'n8n', 'REST APIs', 'Git', 'SQL', 'Figma', 'Data Visualization'
+    'Python', 'JavaScript', 'Java', 'C++', 'HTML', 'CSS',
+    'React', 'Node.js', 'Express.js', 'MongoDB', 'MySQL',
+    'Git', 'GitHub', 'VS Code', 'Data Structures', 'Algorithms',
+    'Problem Solving', 'Team Leadership', 'Project Management'
   ];
 
   const education = [
     {
-      degree: 'B.E. Artificial Intelligence & Data Science',
-      institution: 'Savitribai Phule Pune University (SPPU)',
+      degree: 'B.E (Artificial Intelligence & Data Science)',
+      institution: 'Savitribai Phule Pune University',
       year: '2023-2027',
-      cgpa: '8.8 CGPA',
       status: 'Current'
+    },
+    {
+      degree: 'B.S (Data Science and Application)',
+      institution: 'IIT, Madras Online Degree',
+      year: 'Drop Year',
+      status: '2024-25'
     },
     {
       degree: 'Higher Secondary Certificate (HSC)',
       institution: 'Pratibha International, Pune',
       year: '2023',
-      cgpa: '74.5%',
       status: 'Completed'
     },
     {
       degree: 'Secondary School Certificate (SSC)',
-      institution: 'Amrita Vidyalayam, Pune',
+      institution: 'Jnana Prabhodhini, Pune',
       year: '2021',
-      cgpa: '81.4%',
       status: 'Completed'
     }
   ];
@@ -67,8 +71,8 @@ const AboutSection: React.FC = () => {
             About Me
           </motion.h2>
           <motion.p variants={staggerItem} className="text-base md:text-lg text-[var(--neuro-text-secondary)] max-w-3xl mx-auto">
-            Passionate AI/Data Science student with hands-on experience in automation, mobile development, 
-            and creating innovative solutions that bridge technology and real-world applications.
+            Final year Electronics Engineering student with a passion for full-stack development and a strong foundation in Data Structures & Algorithms.
+            Experienced in building web applications and leading technical teams.
           </motion.p>
         </motion.div>
 
@@ -106,7 +110,7 @@ const AboutSection: React.FC = () => {
                         <span>{edu.year}</span>
                       </span>
                       <span className="neuro-inset px-3 py-1 rounded-full font-medium gradient-text">
-                        {edu.cgpa}
+
                       </span>
                       <span className={`neuro-inset px-3 py-1 rounded-full ${
                         edu.status === 'Current' ? 'text-[var(--neuro-success)]' : 'text-[var(--neuro-text-secondary)]'

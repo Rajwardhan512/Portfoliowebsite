@@ -33,7 +33,7 @@ const ContactSection: React.FC = () => {
     const body = encodeURIComponent(
       `Name: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}`
     );
-    const mailtoLink = `mailto:tanmaypatil5110@gmail.com?subject=${subject}&body=${body}`;
+    const mailtoLink = `mailto:rajwardhanbagawade343@gmail.com?subject=${subject}&body=${body}`;
     
     // Open default email client
     window.location.href = mailtoLink;
@@ -53,15 +53,15 @@ const ContactSection: React.FC = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'tanmaypatil5110@gmail.com',
-      href: 'mailto:tanmaypatil5110@gmail.com',
+      value: 'rajwardhanbagawade343@gmail.com',
+      href: 'mailto:rajwardhanbagawade343@gmail.com',
       color: '#ea4335'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+91 XXXXX XXXXX',
-      href: 'tel:+91XXXXXXXXXX',
+      value: '+91 8149787823',
+      href: 'tel:+918149787823',
       color: '#34a853'
     },
     {
@@ -72,28 +72,6 @@ const ContactSection: React.FC = () => {
       color: '#4285f4'
     },
   ];
-
-  const socialLinks = [
-    {
-      icon: Github,
-      label: 'GitHub',
-      href: 'https://github.com/tanmaypatil',
-      color: '#333'
-    },
-    {
-      icon: Linkedin,
-      label: 'LinkedIn',
-      href: 'https://linkedin.com/in/tanmaypatil',
-      color: '#0077B5'
-    },
-    {
-      icon: Twitter,
-      label: 'Twitter',
-      href: 'https://twitter.com/tanmaypatil',
-      color: '#1DA1F2'
-    },
-  ];
-
   return (
     <section id="contact" className="py-20 px-4 bg-[var(--neuro-bg-secondary)]">
       <div className="max-w-6xl mx-auto">
@@ -126,9 +104,9 @@ const ContactSection: React.FC = () => {
                 Let's Connect
               </h3>
               <p className="text-[var(--neuro-text-secondary)] mb-8 leading-relaxed">
-                I'm currently pursuing my B.E. in AI & Data Science and actively seeking internship opportunities, 
-                collaboration projects, and freelance work. Whether you have a project idea, job opportunity, 
-                or just want to chat about technology, I'd love to hear from you!
+                Final year Electronics Engineering student passionate about web development and problem-solving. 
+                Looking for opportunities in full-stack development and software engineering. Let's connect and 
+                discuss how we can work together!
               </p>
             </motion.div>
 
@@ -165,7 +143,8 @@ const ContactSection: React.FC = () => {
 
             {/* Resume Download Button */}
             <motion.div variants={staggerItem} className="pt-6">
-              <motion.button
+              <motion.a
+                href="https://drive.google.com/drive/my-drive"
                 whileHover={{ 
                   scale: 1.05,
                   boxShadow: '0 15px 30px rgba(102, 126, 234, 0.4)'
@@ -175,7 +154,7 @@ const ContactSection: React.FC = () => {
               >
                 <Download className="w-5 h-5" />
                 <span>Download Resume</span>
-              </motion.button>
+              </motion.a>
             </motion.div>
 
             {/* Social Links */}
@@ -184,27 +163,36 @@ const ContactSection: React.FC = () => {
                 Follow Me
               </h4>
               <div className="flex space-x-4">
-                {socialLinks.map((social, index) => {
-                  const Icon = social.icon;
-                  return (
-                    <motion.a
-                      key={index}
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ 
-                        scale: 1.2, 
-                        y: -5,
-                        boxShadow: `0 10px 25px ${social.color}40`
-                      }}
-                      whileTap={{ scale: 0.9 }}
-                      className="neuro-button p-4 hover:glow-effect transition-all duration-300"
-                      aria-label={social.label}
-                    >
-                      <Icon className="w-6 h-6" style={{ color: social.color }} />
-                    </motion.a>
-                  );
-                })}
+                <motion.a
+                  href="https://github.com/Rajwardhan512"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ 
+                  scale: 1.2, 
+                  y: -5,
+                  boxShadow: '0 10px 25px rgba(0, 0, 0, 0.25)'
+                  }}
+                  whileTap={{ scale: 0.9 }}
+                  className="neuro-button p-4 hover:glow-effect transition-all duration-300"
+                  aria-label="GitHub"
+                >
+                  <Github className="w-6 h-6" />
+                </motion.a>
+                <motion.a
+                  href="https://www.linkedin.com/in/rajwardhan343/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ 
+                  scale: 1.2, 
+                  y: -5,
+                  boxShadow: '0 10px 25px rgba(0, 119, 181, 0.25)'
+                  }}
+                  whileTap={{ scale: 0.9 }}
+                  className="neuro-button p-4 hover:glow-effect transition-all duration-300"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="w-6 h-6" style={{ color: '#0077b5' }} />
+                </motion.a>
               </div>
             </motion.div>
           </motion.div>

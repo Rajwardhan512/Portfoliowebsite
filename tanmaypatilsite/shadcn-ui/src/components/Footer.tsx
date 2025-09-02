@@ -80,7 +80,7 @@ const Footer: React.FC = () => {
               Get In Touch
             </h4>
             <div className="space-y-2 text-[var(--neuro-text-secondary)]">
-              <p>alex.chen@example.com</p>
+              <p>rajwardhanbagawade.online</p>
               <p>+1 (555) 123-4567</p>
               <p>San Francisco, CA</p>
             </div>
@@ -99,7 +99,7 @@ const Footer: React.FC = () => {
             viewport={{ once: true }}
             className="flex items-center space-x-2 text-[var(--neuro-text-secondary)]"
           >
-            <span>© {currentYear} Alex Chen. Made with</span>
+            <span>© {currentYear} Rajwardhana Bagawade</span>
             <motion.div
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ duration: 1, repeat: Infinity }}

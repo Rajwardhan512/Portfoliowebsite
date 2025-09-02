@@ -1,12 +1,22 @@
 import React from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { ExternalLink, Github, Eye, Bot, Smartphone, Video, MessageSquare } from 'lucide-react';
+import { ExternalLink, Github, Eye, Bot, Heart, Video, Film } from 'lucide-react';
 import { staggerContainer, staggerItem, cardHoverVariants } from '@/lib/animations';
 
 const ProjectsSection: React.FC = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
+
+  const sanitizeUrl = (url: string) => {
+    try {
+      const parsed = new URL(url);
+      if (parsed.protocol === 'http:' || parsed.protocol === 'https:') return parsed.toString();
+      return '#';
+    } catch {
+      return '#';
+    }
+  };
 
   const projects = [
     {
@@ -16,8 +26,7 @@ const ProjectsSection: React.FC = () => {
       icon: Bot,
       image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop',
       technologies: ['n8n', 'Twilio', 'Amazon Connect', 'AI/ML', 'REST APIs', 'CRM Integration'],
-      liveUrl: '#',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/tanmay5110/n8n-callcenter-agent',
       featured: true,
       color: '#667eea'
     },
@@ -25,11 +34,10 @@ const ProjectsSection: React.FC = () => {
       id: 2,
       title: 'NutriBot - Flutter Nutrition App',
       description: 'Intelligent Flutter application that scans food labels using Google Vision OCR, calculates NutriScore, and provides comprehensive nutritional insights and recommendations.',
-      icon: Smartphone,
+      icon: Heart,
       image: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=600&h=400&fit=crop',
-      technologies: ['Flutter', 'Dart', 'Google Vision API', 'OCR', 'Firebase', 'Material Design'],
-      liveUrl: '#',
-      githubUrl: '#',
+      technologies: ['Python', 'TensorFlow', 'Scikit-learn', 'Flask', 'Bootstrap', 'SQLite'],
+      githubUrl: 'https://github.com/Rajwardhan512/food-label-analyzer',
       featured: true,
       color: '#02569b'
     },
@@ -40,20 +48,18 @@ const ProjectsSection: React.FC = () => {
       icon: Video,
       image: 'https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=600&h=400&fit=crop',
       technologies: ['Python', 'Flask', 'FFmpeg', 'AI/ML', 'Video Processing', 'REST APIs'],
-      liveUrl: '#',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/tanmay5110/vidsnapai',
       featured: true,
       color: '#ff6b6b'
     },
     {
       id: 4,
-      title: 'AetherChat Platform',
+      title: 'MERNBot Platform',
       description: 'Full-stack scalable AI chat platform designed for enterprise use with real-time messaging, AI integration, and robust architecture for high-volume communications.',
-      icon: MessageSquare,
+      icon: Film,
       image: 'https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=600&h=400&fit=crop',
-      technologies: ['React', 'Node.js', 'AI Integration', 'WebSocket', 'PostgreSQL', 'Docker'],
-      liveUrl: '#',
-      githubUrl: '#',
+      technologies: ['Python', 'scikit-learn', 'Pandas', 'Streamlit', 'APIs', 'Data Analysis'],
+      githubUrl: 'https://github.com/Rajwardhan512/mernbot',
       featured: false,
       color: '#4ecdc4'
     }
@@ -164,34 +170,18 @@ const ProjectsSection: React.FC = () => {
                       <IconComponent className="w-4 md:w-6 h-4 md:h-6" style={{ color: project.color }} />
                     </motion.div>
                     
-                    {/* Overlay Actions */}
-                    <div className="absolute inset-0 flex items-center justify-center space-x-3 md:space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {/* Overlay Actions: Only GitHub link */}
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <motion.a
-                        href={project.liveUrl}
+                        href={sanitizeUrl(project.githubUrl)}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         whileHover={{ scale: 1.1, y: -3 }}
                         whileTap={{ scale: 0.9 }}
                         className="neuro-button p-2 md:p-3 bg-white/20 backdrop-blur-sm"
-                        aria-label="View live project"
-                      >
-                        <Eye className="w-4 md:w-5 h-4 md:h-5 text-white" />
-                      </motion.a>
-                      <motion.a
-                        href={project.githubUrl}
-                        whileHover={{ scale: 1.1, y: -3 }}
-                        whileTap={{ scale: 0.9 }}
-                        className="neuro-button p-2 md:p-3 bg-white/20 backdrop-blur-sm"
-                        aria-label="View source code"
+                        aria-label="View source code on GitHub"
                       >
                         <Github className="w-4 md:w-5 h-4 md:h-5 text-white" />
-                      </motion.a>
-                      <motion.a
-                        href={project.liveUrl}
-                        whileHover={{ scale: 1.1, y: -3 }}
-                        whileTap={{ scale: 0.9 }}
-                        className="neuro-button p-2 md:p-3 bg-white/20 backdrop-blur-sm"
-                        aria-label="External link"
-                      >
-                        <ExternalLink className="w-4 md:w-5 h-4 md:h-5 text-white" />
                       </motion.a>
                     </div>
 

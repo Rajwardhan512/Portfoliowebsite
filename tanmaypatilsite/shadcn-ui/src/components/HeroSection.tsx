@@ -6,7 +6,7 @@ import { staggerContainer, staggerItem, floatingVariants } from '@/lib/animation
 
 const HeroSection: React.FC = () => {
   const [displayText, setDisplayText] = useState('');
-  const fullText = "AI/Data Science Engineer | Automation Enthusiast | Flutter Developer";
+  const fullText = "AI/Data Science Engineer | Automation Enthusiast | Flutter Developer| Project Management";
   
   useEffect(() => {
     let index = 0;
@@ -33,19 +33,19 @@ const HeroSection: React.FC = () => {
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      href: 'https://linkedin.com/in/tanmay5110',
+      href: 'https://www.linkedin.com/in/rajwardhan343/',
       color: '#0077B5'
     },
     {
       icon: Github,
       label: 'GitHub',
-      href: 'https://github.com/tanmay5110',
+      href: 'https://github.com/Rajwardhan512',
       color: '#333'
     },
     {
       icon: ExternalLink,
       label: 'Portfolio',
-      href: 'https://tanmaypatil.fun',
+      href: 'https://www.rajwardhanbagawade.online',
       color: '#667eea'
     }
   ];
@@ -109,7 +109,7 @@ const HeroSection: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                Tanmay Patil
+                Rajwardhan Bagawade
               </motion.h1>
             </motion.div>
 
@@ -136,7 +136,7 @@ const HeroSection: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <p className="text-base md:text-lg text-[var(--neuro-text-secondary)] max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                B.E. in Artificial Intelligence & Data Science (CGPA 8.8) | Building intelligent automation solutions, 
+                B.E. in Artificial Intelligence & Data Science | Building intelligent automation solutions, 
                 mobile apps, and AI-powered platforms. Currently interning at CodeWithHarry.
               </p>
             </motion.div>
@@ -154,13 +154,13 @@ const HeroSection: React.FC = () => {
                   whileHover={{ scale: 1.05, color: 'var(--neuro-accent)' }}
                   className="transition-colors cursor-pointer"
                 >
-                  📧 tanmaypatil5110@gmail.com
+                  📧 rajwardhanbagawade343@gmail.com
                 </motion.span>
                 <motion.span 
                   whileHover={{ scale: 1.05, color: 'var(--neuro-accent)' }}
                   className="transition-colors cursor-pointer"
                 >
-                  📱 +91 9876543210
+                  📱 +91 8149787823
                 </motion.span>
               </div>
             </motion.div>
@@ -239,12 +239,12 @@ const HeroSection: React.FC = () => {
               >
                 <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 neuro-card rounded-full overflow-hidden glow-effect">
                   <img
-                    src="/tanmay-photo.jpg"
-                    alt="Tanmay Patil"
+                    src="/Photo1.jpg"
+                    alt="Rajwardhan Bagawade"
                     className="w-full h-full object-cover"
                     onError={(e) => {
                       console.log('Image failed to load:', e);
-                      e.currentTarget.src = '/images/TanmayPatil.jpg';
+                      e.currentTarget.src = '/images/Photo1.jpg';
                     }}
                   />
                 </div>
