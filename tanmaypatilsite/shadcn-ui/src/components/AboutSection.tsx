@@ -214,7 +214,7 @@ const AboutSection: React.FC = () => {
                 My Journey
               </h4>
               <p className="text-[var(--neuro-text-secondary)] leading-relaxed mb-4 text-sm md:text-base">
-                Currently pursuing B.E. in Artificial Intelligence & Data Science at SPPU with an 8.8 CGPA. 
+                Currently pursuing B.E. in Artificial Intelligence & Data Science at SPPU. 
                 I'm passionate about creating intelligent automation solutions and cross-platform mobile applications.
               </p>
               <p className="text-[var(--neuro-text-secondary)] leading-relaxed text-sm md:text-base">
