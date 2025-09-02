@@ -28,43 +28,59 @@ const Footer: React.FC = () => {
       <div className="max-w-6xl mx-auto">
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-3 gap-8 mb-8">
-          {/* About Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="space-y-4"
-          >
-            <h4 className="text-lg font-semibold text-[var(--neuro-text-primary)]">About</h4>
-            <p className="text-[var(--neuro-text-secondary)] leading-relaxed">
-              Full Stack Developer passionate about creating innovative solutions. 
-              Let's turn ideas into reality.
-            </p>
-          </motion.div>
-
           {/* Quick Links */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="space-y-4"
+            className="flex flex-col items-center space-y-4"
           >
             <h4 className="text-lg font-semibold text-[var(--neuro-text-primary)]">
               Navigation
             </h4>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="flex flex-col items-center gap-3">
               {quickLinks.map((link) => (
                 <motion.button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  whileHover={{ x: 5 }}
-                  className="text-left text-[var(--neuro-text-secondary)] hover:text-[var(--neuro-accent)] transition-colors duration-200"
+                  whileHover={{ scale: 1.05 }}
+                  className="text-center text-[var(--neuro-text-secondary)] hover:text-[var(--neuro-accent)] transition-colors duration-200"
                 >
                   {link.label}
                 </motion.button>
               ))}
+            </div>
+          </motion.div>
+
+          {/* Social Links */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="flex flex-col items-center space-y-4"
+          >
+            <h4 className="text-lg font-semibold text-[var(--neuro-text-primary)]">Social</h4>
+            <div className="flex flex-col items-center gap-3">
+              <motion.a
+                href="https://github.com/Rajwardhan512"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                className="text-[var(--neuro-text-secondary)] hover:text-[var(--neuro-accent)] transition-colors duration-200"
+              >
+                GitHub
+              </motion.a>
+              <motion.a
+                href="https://www.linkedin.com/in/rajwardhan343/"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                className="text-[var(--neuro-text-secondary)] hover:text-[var(--neuro-accent)] transition-colors duration-200"
+              >
+                LinkedIn
+              </motion.a>
             </div>
           </motion.div>
 
@@ -74,15 +90,14 @@ const Footer: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="space-y-4"
+            className="flex flex-col items-center space-y-4"
           >
             <h4 className="text-lg font-semibold text-[var(--neuro-text-primary)]">
-              Get In Touch
+              Contact
             </h4>
-            <div className="space-y-2 text-[var(--neuro-text-secondary)]">
-              <p>📧 rajwardhanbagawade343@gmail.com</p>
-              <p>📍 Pune, Maharashtra, India</p>
-              <p>💼 Available for opportunities</p>
+            <div className="flex flex-col items-center gap-3 text-[var(--neuro-text-secondary)]">
+              <p>📍 Pune, Maharashtra</p>
+              <p>💼 Open to Opportunities</p>
             </div>
           </motion.div>
         </div>
@@ -91,7 +106,7 @@ const Footer: React.FC = () => {
         <div className="neuro-inset h-px mb-8"></div>
 
         {/* Bottom Section */}
-        <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <div className="flex flex-col items-center space-y-4">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -106,7 +121,7 @@ const Footer: React.FC = () => {
             >
               <Heart className="w-4 h-4 text-red-500 fill-current" />
             </motion.div>
-            <span>Made with passion & code</span>
+            <span>Made with passion</span>
           </motion.div>
 
           {/* Back to Top Button */}
