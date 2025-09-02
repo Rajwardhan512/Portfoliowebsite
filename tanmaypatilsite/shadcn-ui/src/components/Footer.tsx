@@ -81,8 +81,7 @@ const Footer: React.FC = () => {
             </h4>
             <div className="space-y-2 text-[var(--neuro-text-secondary)]">
               <p>rajwardhanbagawade.online</p>
-              <p>+1 (555) 123-4567</p>
-              <p>San Francisco, CA</p>
+              <p>Pune, India</p>
             </div>
           </motion.div>
         </div>
