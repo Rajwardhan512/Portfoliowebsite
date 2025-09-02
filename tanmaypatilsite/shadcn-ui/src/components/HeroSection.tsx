@@ -160,7 +160,7 @@ const HeroSection: React.FC = () => {
                   whileHover={{ scale: 1.05, color: 'var(--neuro-accent)' }}
                   className="transition-colors cursor-pointer"
                 >
-                  📱 +91 8149787823
+                  📱 +91 xxxxxxxxxx
                 </motion.span>
               </div>
             </motion.div>
