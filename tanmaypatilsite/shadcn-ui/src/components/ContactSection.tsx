@@ -146,15 +146,29 @@ const ContactSection: React.FC = () => {
               <h4 className="text-lg font-semibold text-[var(--neuro-text-primary)] mb-4">
                 Follow Me
               </h4>
-              <div className="flex space-x-4">
+              <div className="flex flex-wrap gap-4">
+                <motion.a
+                  href="/files/resume.pdf"
+                  download="Rajwardhan_Bagawade_Resume.pdf"
+                  whileHover={{ 
+                    scale: 1.2, 
+                    y: -5,
+                    boxShadow: '0 10px 25px rgba(102, 126, 234, 0.4)'
+                  }}
+                  whileTap={{ scale: 0.9 }}
+                  className="neuro-button p-4 hover:glow-effect transition-all duration-300 flex items-center gap-2"
+                  aria-label="Download Resume"
+                >
+                  <Download className="w-6 h-6" style={{ color: '#667eea' }} />
+                </motion.a>
                 <motion.a
                   href="https://github.com/Rajwardhan512"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ 
-                  scale: 1.2, 
-                  y: -5,
-                  boxShadow: '0 10px 25px rgba(0, 0, 0, 0.25)'
+                    scale: 1.2, 
+                    y: -5,
+                    boxShadow: '0 10px 25px rgba(0, 0, 0, 0.25)'
                   }}
                   whileTap={{ scale: 0.9 }}
                   className="neuro-button p-4 hover:glow-effect transition-all duration-300"
