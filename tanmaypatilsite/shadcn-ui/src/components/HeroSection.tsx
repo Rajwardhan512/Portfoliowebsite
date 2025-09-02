@@ -42,12 +42,7 @@ const HeroSection: React.FC = () => {
       href: 'https://github.com/Rajwardhan512',
       color: '#333'
     },
-    {
-      icon: ExternalLink,
-      label: 'Portfolio',
-      href: 'https://www.rajwardhanbagawade.online',
-      color: '#667eea'
-    }
+    
   ];
 
   // Optimized particle positions for better visual balance
