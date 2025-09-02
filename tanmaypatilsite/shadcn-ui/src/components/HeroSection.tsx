@@ -63,7 +63,7 @@ const HeroSection: React.FC = () => {
   ];
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden px-4">
+    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 pt-24 md:pt-32">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-[var(--neuro-bg-primary)] to-[var(--neuro-bg-secondary)]">
         {/* Optimized Background Particles */}
